@@ -1,4 +1,6 @@
 ProductivityStyled::Application.routes.draw do
+  resources :douchebags
+
   resources :hours
 
   root :to => "home#index"

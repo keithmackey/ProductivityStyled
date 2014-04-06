@@ -1,0 +1,27 @@
+<h1>Listing douchebags</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>How big</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @douchebags.each do |douchebag| %>
+      <tr>
+        <td><%= douchebag.name %></td>
+        <td><%= douchebag.how_big %></td>
+        <td><%= link_to 'Show', douchebag %></td>
+        <td><%= link_to 'Edit', edit_douchebag_path(douchebag) %></td>
+        <td><%= link_to 'Destroy', douchebag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Douchebag', new_douchebag_path %>

@@ -1,0 +1,2 @@
+module DouchebagsHelper
+end
